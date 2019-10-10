@@ -25,12 +25,14 @@ SECRET_KEY = '036$dgnyrd#$)0-8q7+(wmn5r#@rpa0a7r8%#5ujjf@g)#337f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'notifier',
+    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -68,6 +70,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'channelstut.wsgi.application'
+
+ASGI_APPLICATION = 'channelstut.routing.application'
+
 
 
 # Database
@@ -118,3 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
