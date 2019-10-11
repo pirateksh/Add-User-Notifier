@@ -110,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
 
@@ -128,3 +128,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+# Channels configuration
+
+CHANNEL_LAYERS = {
+    "default": {
+        # We installed channels_redis using pip.
+        "BACKEND": "channels_redis.core.RedisChannelLayer", 
+        "CONFIG": {
+            # Setting ports -> redis operates on port 6379 (probably).
+            "hosts": [("localhost", 6379)]
+        }
+    }
+}

@@ -11,6 +11,9 @@
 </head>
 <body>
 	<h1>Notifier</h1>
+	<p>Notifications</p>
+	<ul id="notifylist"></ul>
+
 	<script>
 		// Adding event listener to wait until page is loaded.
 		document.addEventListener('DOMContentLoaded', function () {
@@ -18,12 +21,31 @@
 			// Creating WebSocketBridge instance.
 			const webSocketBridge = new channels.WebSocketBridge();
 
+			const nl = document.querySelector("#notifylist");
+
+
 			// Connecting to path.
-			webSocketBridge.connect('/ws/');
+			// webSocketBridge.connect('/ws/');
+			// New path for notifcations.
+			webSocketBridge.connect('/notifications/');
 
 			// Listening to that location for any event.
-			webSocketBridge.listen(function(action) {
+			webSocketBridge.listen(function(action, stream) {
 				console.log("RESPONSE:", action);
+
+				if(action.event === "New User") {
+					// This event name (New User)was created in signals.py
+
+					// Create unordered list element
+					var el = document.createElement("li");
+
+					//Populate the element
+					// `` can be used to interpolate variable values by using ${} as below.
+					el.innerHTML = `New user <b> ${action.username} </b> has joined.`;
+
+					// Adding this element as a child of notifylist
+					nl.appendChild(el);
+				}
 			});
 
 			// Creating a top level property for simplifying debugging
