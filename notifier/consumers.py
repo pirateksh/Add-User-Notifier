@@ -1,4 +1,4 @@
-import asyncio
+import asyncio # Python library to handle asynchronous Requests
 from channels.consumer import AsyncConsumer
 
 # Using a higher level consumer.
