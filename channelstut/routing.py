@@ -27,7 +27,7 @@ application = ProtocolTypeRouter({
 
 application = ProtocolTypeRouter({
 	"websocket": URLRouter([
-		# Path is routed to Noseyonsumer
+		# Path is routed to NoseyConsumer
 		# Changing path to notifications/ instead of ws/
 		path("notifications/", NoseyConsumer),
 	]),
