@@ -1,6 +1,6 @@
 # Add-User-Notifier
 
-This is a mini-project to learn implementation and usage of Web Sockets in Django using Django-Channels.
+This is a mini-project to learn implementation and usage of Web Sockets in the Django using Django-Channels.
 
 ## Features - 
 
