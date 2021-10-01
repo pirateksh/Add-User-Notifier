@@ -11,6 +11,6 @@ This is a mini-project to learn implementation and usage of Web Sockets in Djang
 * <b>_Echo_</b> - An echo of message sent is displayed as log. Corresponding consumer is _EchoConsumer_.
 
 #### Note - 
-* Currently only 'Add User Notifier' is functional as other two functionalities(Tick Tock and Echo) were built in the learning process to eventually build 'Add User Notifier'.
+* Currently only 'Add User Notifier' is functional as other two functionalities(Tick Tock and Echo) were built in the learning process to eventually build the 'Add User Notifier'.
 * Refer to _requirements.txt_ for dependencies used. Additionaly, _redis_ was also installed.
 
