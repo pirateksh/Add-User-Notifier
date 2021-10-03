@@ -14,3 +14,4 @@ This is a mini-project to learn implementation and usage of Web Sockets in Djang
 * Currently only 'Add User Notifier' is functional as other two functionalities(Tick Tock and Echo) were built in the learning process to eventually build 'Add User Notifier'.
 * Refer to _requirements.txt_ for dependencies used. Additionaly, _redis_ was also installed.
 
+Added some coding questions on graphs too so that overall development takes place :)
